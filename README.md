@@ -54,28 +54,69 @@ For data visualization, Pyplot will be the primary resource, enabling the creati
 It will also be essential to clearly define each project phase and the resources associated with them to ensure a structured and efficient workflow. Briefly the main stages will be: data understanding, data preparation, modeling and evaluation. Along with the report each of the mentioned phases will be explained and explained.
 
 II. Data understanding:
+
 As the previous information was important to begin understanding the business and why this analysis was conducted. The following analysis will be focused on understanding the data and how from this stage the whole analysis and model will have more sense.
+
 Collecting initial data:
+
 The dataset used for this analysis was sourced from Kaggle, a platform known for hosting a wide variety of datasets for analytical and project-based purposes. For this project, the Ford dataset was selected due to the significant growth and relevance of the automotive industry in recent years. Exploring how various features influence vehicle pricing through predictive models offered valuable insights.
+
 The dataset was originally provided in CSV format and processed using Python, as mentioned previously. It consists of 9 columns and 17,967 rows, each representing different vehicle characteristics. While the dataset includes features identified as important by the company, this analysis aims to evaluate their actual impact on pricing. As a result, some features may be excluded based on their relevance and predictive value.
+
 Describe Data
+
 To describe the dataset used in this project, several key aspects must be considered:
+
 Number of Variables:
 The original dataset contains nine variables, of which six are numerical and two are categorical. These variables provide a strong foundation for understanding the different factors influencing car prices. A total of 17,967 records are included in the dataset.
+
 Type of Variables:
 The data is primarily divided into numerical and categorical types. Numerical variables include fields such as price, mileage, and year, which are essential for quantitative analysis. Categorical variables, such as model and fuel type, offer valuable context that can reveal trends or preferences related to pricing. For example, analyzing how the model variable interacts with price can help identify whether certain models consistently have higher or lower values.
+
 Record Count and Duplicates:
 The dataset includes 17,967 records. During the initial exploration, it was noted that there are repeated models across different years. These repetitions were not removed, as they are relevant for further analysis. In fact, the presence of duplicate models over multiple years may help uncover patterns in pricing or popularity trends and are considered valuable for future exploration.
+
 III. Data preparation
+
+Select data:
+
+For this analysis, all nine available variables were taken into consideration. Since the goal was to identify which features are most closely related to predicting the variable price, it was important to retain the full set of variables. By including all features in the modeling phase, the analysis allows the algorithm to determine which variables contribute most effectively to price prediction and which have less impact.
+
+Clean Data:
+
+The dataset was relatively clean from the start. Due to the nature of the project, it was important to retain most of the data—even entries with repeated model names—as these could provide valuable insights. For instance, the presence of duplicate model names across different years or with varying specifications may reveal patterns relevant to pricing. Moreover, keeping the dataset intact ensures that the machine learning model has access to the full variety of data needed to evaluate predictability accurately.
+
+Construct Data:
+
+Constructing additional features was a fundamental part of this analysis. Given the presence of categorical variables, dummy variables were created to transform these categories into binary format. This step allowed the categorical data to be included in the predictive model, making it possible for the algorithm to interpret and assess their importance in relation to the target variable, price.
+
+Integrate data:
+
+This project was conducted using a single dataset, so data integration was not required. However, this step remains valuable for future extensions of the analysis. For instance, incorporating external data sources—such as customer reviews, regional market trends, or dealership performance—could provide deeper insights. While the current dataset contained sufficient information to identify patterns and make price predictions, access to additional data could support more complex questions, such as identifying best-selling models or forecasting brand performance within the company.
+
+Data formatting:
+
+Data formatting was essential to prepare the dataset for analysis. Several columns originally stored as strings (such as year, mileage, and price) were converted to numeric types to allow for mathematical operations and model training. Column names were standardized using lowercase and underscores for consistency. Categorical variables such as model, and fuel type were encoded where necessary to ensure compatibility with machine learning algorithms.
+
+III. Data preparation
+
 Select data:
 For this analysis, all nine available variables were taken into consideration. Since the goal was to identify which features are most closely related to predicting the variable price, it was important to retain the full set of variables. By including all features in the modeling phase, the analysis allows the algorithm to determine which variables contribute most effectively to price prediction and which have less impact.
+
 Clean Data:
+
 The dataset was relatively clean from the start. Due to the nature of the project, it was important to retain most of the data—even entries with repeated model names—as these could provide valuable insights. For instance, the presence of duplicate model names across different years or with varying specifications may reveal patterns relevant to pricing. Moreover, keeping the dataset intact ensures that the machine learning model has access to the full variety of data needed to evaluate predictability accurately.
+
 Construct Data:
+
 Constructing additional features was a fundamental part of this analysis. Given the presence of categorical variables, dummy variables were created to transform these categories into binary format. This step allowed the categorical data to be included in the predictive model, making it possible for the algorithm to interpret and assess their importance in relation to the target variable, price.
+
 Integrate data:
+
 This project was conducted using a single dataset, so data integration was not required. However, this step remains valuable for future extensions of the analysis. For instance, incorporating external data sources—such as customer reviews, regional market trends, or dealership performance—could provide deeper insights. While the current dataset contained sufficient information to identify patterns and make price predictions, access to additional data could support more complex questions, such as identifying best-selling models or forecasting brand performance within the company.
+
 Data formatting:
+
 Data formatting was essential to prepare the dataset for analysis. Several columns originally stored as strings (such as year, mileage, and price) were converted to numeric types to allow for mathematical operations and model training. Column names were standardized using lowercase and underscores for consistency. Categorical variables such as model, and fuel type were encoded where necessary to ensure compatibility with machine learning algorithms.
 
 IV. Modeling
